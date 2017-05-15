@@ -49,7 +49,7 @@ public class DAOcredito implements DAOcredito_interface {
 	}
 	public DTOcredito suma(String matricula, double dinero){
 		double creditoactual = disponible(matricula);
-		if(creditoactual == (Double) null){
+		if(creditoactual == 0){
 			System.out.println("No existe");
 			return null;
 		}else{

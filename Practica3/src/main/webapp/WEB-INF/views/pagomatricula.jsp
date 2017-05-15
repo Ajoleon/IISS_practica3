@@ -46,52 +46,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											
 											<div class="login-tab">
 												<div class="user-login">
-										
-<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">														
+											<form action="http://localhost:8081/p3/Matricula" method="POST">
 														Matricula: <input type="text" name ="matricula" required="">
 														
 															<div class="user-grids">
 																<div class="user-left">
 																	<div class="single-bottom">
 																			<ul>
-																				
+																				<input type="Submit">
 																			</ul>
 																	</div>
 																</div>
 																</div>
-
-<input type="hidden" name="cmd" value="_xclick">
-<input type="hidden" name="business" value="EB6W65Q6ZBKPW">
-<input type="hidden" name="lc" value="ES">
-<input type="hidden" name="item_name" value="Recarga saldo Parking">
-<input type="hidden" name="button_subtype" value="services">
-<input type="hidden" name="no_note" value="1">
-<input type="hidden" name="no_shipping" value="1">
-<input type="hidden" name="currency_code" value="EUR">
-<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynow_LG.gif:NonHosted">
-<table>
-<tr><td><input type="hidden" name="on0" value="Opciones de Pago">Opciones de Pago</td></tr><tr><td><select name="os0">
-	<option value="Opcion 1">Opcion 1 5,00 EUR</option>
-	<option value="Opcion 2">Opcion 2 10,00 EUR</option>
-	<option value="Opcion 3">Opcion 3 15,00 EUR</option>
-</select> </td></tr>
-</table>
-<input type="hidden" name="currency_code" value="EUR">
-<input type="hidden" name="option_select0" value="Opcion 1">
-<input type="hidden" name="option_amount0" value="5.00">
-<input type="hidden" name="option_select1" value="Opcion 2">
-<input type="hidden" name="option_amount1" value="10.00">
-<input type="hidden" name="option_select2" value="Opcion 3">
-<input type="hidden" name="option_amount2" value="15.00">
-<input type="hidden" name="option_index" value="0">
-<input type="image" src="https://www.sandbox.paypal.com/es_ES/ES/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal, la forma rápida y segura de pagar en Internet.">
-<img alt="" border="0" src="https://www.sandbox.paypal.com/es_ES/i/scr/pixel.gif" width="1" height="1">
-</form>
-
-</form>
-
-
-</form>
+																</form>
 
 
 

@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -126,23 +127,30 @@ public class HomeController {
 		
 		
 	}
-	@RequestMapping(value = "/getCoste/", method = RequestMethod.GET)
-	public @ResponseBody double credito (HttpServletRequest req, Model model){
-		String matricula = req.getParameter("matricula");
+	@RequestMapping(value = "/getCoste/{matricula}", method = RequestMethod.GET)
+	public @ResponseBody double credito (@PathVariable (value="matricula")String matricula){
 		double disponible = dao1.disponible(matricula);
 		return disponible;
 	}
-	@RequestMapping(value = "/sumarDinero/{", method = RequestMethod.POST)
-	public @ResponseBody void sumar (HttpServletRequest req, Model model){
-		String matricula = req.getParameter("matricula");
-		double  dinero = Double.valueOf(req.getParameter("dinero"));
-		
+	@RequestMapping(value = "/sumarDinero/{dinero}", method = RequestMethod.GET)
+	public String sumar (HttpServletRequest req,@PathVariable (value="dinero")double dinero){
+		HttpSession session = req.getSession(false);
+		String matricula = (String) session.getAttribute("matricula");
+		System.out.println(matricula);
 		dao1.suma(matricula, dinero);
-		
+		return "home";
 	}
 	@RequestMapping(value = "/pago", method = RequestMethod.GET)
 	public String pago (HttpServletRequest req, Model model){
 		
-		return "pag1";
+		return "pagomatricula";
+	}
+	@RequestMapping(value = "/Matricula", method = RequestMethod.POST)
+	public String matricula (HttpServletRequest req, Model model){
+		HttpSession session = req.getSession(true);
+		String matricula = req.getParameter("matricula");
+		session.setAttribute("matricula",matricula);
+		System.out.println(matricula);
+		return "pago";
 	}
 }

@@ -59,18 +59,7 @@
                                          evento.preventDefault(); //Evita que se ejecute la peticion Get del formulario.
                                          })
                       </script>
-                  <form action="#" id="obtener">
-                      Consulta de saldo<br>
-                      Matricula: <input type="text" nombre="vehiculo" id="matricula1" value="111AAA">
-                          <p>Su saldo es de : <span id="mensaje"></span></p>
-                          <input type="submit" value="Enviar">
-                              </form>
-                  <script type="text/javascript">
-                      $('#obtener').submit(function(){
-                                           var url = 'http://localhost:8081/p3/getCoste/';
-                                           $('#mensaje').load(url,"matricula="+$('#matricula1').val())
-                                           })
-                      </script>
+                  
                     </div>
                     </div>
                     <p class="footer">Practica 2 Ingenieria de Servicios de Telecomunicación. Grado en Ingenieria Telematica. Universidad de Jaén. </p>
